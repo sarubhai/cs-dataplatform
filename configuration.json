@@ -1,0 +1,58 @@
+{
+    "endpoints": {
+        "api1_dataset1": {
+            "url": "https://api1.demo.com/v1/dataset1",
+            "auth_type": "basic",
+            "auth_params": {
+                "username": "sa-username",
+                "password": "sa@password"
+            },
+            "params": {
+                "page": 1,
+                "per_page": 100
+            },
+            "is_incremental": "False",
+            "format": "json"
+        },
+        "api2_dataset1": {
+            "url": "https://api2.demo.com/v1/dataset1",
+            "auth_type": "oauth2",
+            "auth_params": {
+                "client_id": "client-ID",
+                "client_secret": "client-secret",
+                "token_url": "https://api2.demo.com/oauth/token"
+            },
+            "params": {
+                "page": 1,
+                "per_page": 100
+            },
+            "is_incremental": "False",
+            "format": "json"
+        },
+        "api3_dataset1": {
+            "url": "https://api3.demo.com/v1/dataset1",
+            "auth_type": "apikey",
+            "auth_params": {
+                "header_key": "X-Api-Key",
+                "token": "api-key"
+            },
+            "is_incremental": "True",
+            "format": "json"
+        },
+        "api3_dataset2": {
+            "url": "https://api3.demo.com/v1/dataset2",
+            "auth_type": "apikey",
+            "auth_params": {
+                "query_param": "apikey",
+                "token": "api-key"
+            },
+            "params": {
+                "limit": 100
+            },
+            "is_incremental": "False",
+            "format": "json",
+            "start_date": "2024-01-01",
+            "last_run": "2024-10-10T00:00:00"
+        }
+    }
+}
